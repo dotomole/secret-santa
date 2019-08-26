@@ -8,7 +8,7 @@ You require a .csv file in the following format:
 
 `firstname,lastname,email` to be saved as **people.csv** (Example in folder)
 
-Then run script (with Python installed) as: <code>py secretsanta.py</code>
+Then run script (with Python installed) as: <code>py secretsanta.py</code><br>
 You will then be prompted for your email login for where the emails will send from. Once entered the program will begin assigning random variables to people and send out all the emails.
 
 ## Notes
