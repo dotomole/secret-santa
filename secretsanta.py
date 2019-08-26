@@ -62,10 +62,10 @@ def sendMessage(receiver_first, receiver_last, receiver_email, toBuyFirst, toBuy
 def main():
     picks = [] #obj arr
 
-    #Create 2 arrays, one with list of people
-    #and another for random ordered people
+    #All people from file
     people = getPeople("people.csv")
 
+    #Initialized to enter the loop below
     theirPick = people[len(people)-1]
 
     #If the last person gets themselves then the whole process
@@ -78,7 +78,7 @@ def main():
         if (i >= 1):
             del picks
 
-        #Copy all people into the choices arr
+        #Copy all people into another 'choices' arr
         choices = people.copy()
 
         #people[j] = the person getting the email
@@ -108,14 +108,14 @@ def main():
             picks.append(Pick(firstName, lastName, email, toBuyFirst, toBuyLast))
             j+=1
         i=+1
-
     i=0
+
+    #Send all the emails
     for pick in picks:
         print("sending email "+str(i+1)+" ...")
         sendMessage(pick.firstName, pick.lastName, pick.email, pick.toBuyFirst, pick.toBuyLast)
         i+=1
     
-
 if __name__ == '__main__':
     sender_email = input("Enter your email address: ")
     password = input("Enter your email password: ")
