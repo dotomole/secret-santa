@@ -61,6 +61,7 @@ def sendMessage(receiver_first, receiver_last, receiver_email, toBuyFirst, toBuy
 
 def main():
     picks = [] #obj arr
+    i=0
 
     #All people from file
     people = getPeople("people.csv")
@@ -72,7 +73,6 @@ def main():
     #must be restarted...
     while (theirPick == people[len(people)-1]):
         j=0
-        i=0
 
         #If it has ever been restarted, delete all picks and start again
         if (i >= 1):
@@ -108,7 +108,6 @@ def main():
             picks.append(Pick(firstName, lastName, email, toBuyFirst, toBuyLast))
             j+=1
         i=+1
-    i=0
 
     #Send all the emails
     for pick in picks:
