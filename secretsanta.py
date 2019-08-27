@@ -1,6 +1,7 @@
 import smtplib, ssl, random
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
+
 class Pick(object):
     firstName = ""
     lastName = ""
@@ -107,7 +108,7 @@ def main():
             #Create object of who's buying for who, to later send emails
             picks.append(Pick(firstName, lastName, email, toBuyFirst, toBuyLast))
             j+=1
-        i=+1
+        i+=1
 
     #Send all the emails
     for pick in picks:
