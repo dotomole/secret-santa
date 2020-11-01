@@ -12,4 +12,4 @@ Then run script (with Python installed) as: <code>py secretsanta.py</code><br>
 You will then be prompted for your email login for where the emails will send from. Once entered the program will begin assigning random variables to people and send out all the emails.
 
 ## Notes
-At the moment it's only set up for Gmail accounts to send from, thus you'll need to login with a Gmail account.
+I have only tested this sending from a Gmail account with access for "Less secure apps" enabled.
