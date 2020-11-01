@@ -78,6 +78,7 @@ def main():
         #If it has ever been restarted, delete all picks and start again
         if (i >= 1):
             del picks
+            picks = []
 
         #Copy all people into another 'choices' arr
         choices = people.copy()
